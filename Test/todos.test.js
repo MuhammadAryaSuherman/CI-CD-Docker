@@ -1,10 +1,10 @@
 const request = require('supertest');
-const app = require('../app'); // path ke file app.js Anda
+const app = require('../app');
 
 describe('TodoController', () => {
     it('should return a list of todos', async () => {
         const res = await request(app)
-            .get('/todos') // ganti dengan path yang sesuai
+            .get('/todos')
             .expect('Content-Type', /json/)
             .expect(200);
 
@@ -13,7 +13,7 @@ describe('TodoController', () => {
 
     it('should return a todo detail', async () => {
         const res = await request(app)
-            .get('/todos/1') // ganti dengan id yang valid
+            .get('/todos/1')
             .expect('Content-Type', /json/)
             .expect(200);
 
@@ -44,7 +44,7 @@ describe('TodoController', () => {
 
     it('should update a todo', async () => {
         const res = await request(app)
-            .put('/todos/1') // ganti dengan id yang valid
+            .put('/todos/1')
             .send({
                 title: 'Programmer Junior'
             })
@@ -56,7 +56,7 @@ describe('TodoController', () => {
 
     it('should delete a todo', async () => {
         const res = await request(app)
-            .delete('/todos/2') // ganti dengan id yang valid
+            .delete('/todos/2')
             .expect('Content-Type', /json/)
             .expect(200);
 

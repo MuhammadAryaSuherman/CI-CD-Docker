@@ -41,5 +41,5 @@ module.exports = (sequelize, DataTypes) => {
         modelName: 'Todo',
     });
     
-    return Todo; // Tambahkan baris ini
+    return Todo;
 };
