@@ -25,4 +25,4 @@ jobs:
       with:
         push: true
         file: ./dockerfile
-        tags: ${{ secrets.DOCKER_USERNAME }}/TodoApi:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/todoapi:latest
