@@ -1,4 +1,4 @@
-name: Todo CI/CD
+name: Todo Image CI/CD
 
 on:
   push:
